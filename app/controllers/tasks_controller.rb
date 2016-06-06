@@ -11,7 +11,7 @@ class TasksController < ApplicationController
     @task = @task_list.tasks.new(task_params)
 
     if params[:task][:completed]
-      @task.completed = true
+      @task.completed == true
     end
 
     if @task.save
